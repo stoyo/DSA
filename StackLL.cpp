@@ -123,8 +123,8 @@ public:
             Node<T> *fromTo = tip;
             Node<T> *toFrom = tip;
 
-            for(int i = cap; i < start; i++){
-                if(i > end-1) {
+            for(int i = cap; i-1 > start; i--){
+                if(i-1 > end) {
                     fromTo = fromTo->previous;
                 }
                 toFrom = toFrom->previous;
@@ -178,9 +178,9 @@ int main()
 	st1.swap(5, 6);
 	st1.swap(1, st1.size());
 	cout << st1 << "\nFinished test 3.\n";
-
-	cout << st1.top();
-
+    
+    cout << st1.top();
+    cout<< st1.pop();
 	Stack<double> ds;
 	ds = st1;
 	cout << st1 << "\n" << ds << "\nFinished test 4.\n";
